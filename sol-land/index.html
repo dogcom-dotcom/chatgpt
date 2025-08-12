@@ -3,45 +3,43 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>SOL Insider — Solana Holders’ Network</title>
-  <meta name="description" content="A private hub for SOL holders: curated opportunities, staking programs, DePIN integrations, and governance plays." />
+  <title>Private Solana Network — Early Vetted Opportunities</title>
+  <meta name="description" content="Curated staking, DePIN and governance on Solana for holders. Metrics, limits and timelines. Access by application." />
   <meta property="og:title" content="SOL Insider — Solana Holders’ Network" />
   <meta property="og:description" content="Exclusive access for SOL holders to vetted, ecosystem-backed opportunities." />
-  <meta property="og:image" content="https://raw.githubusercontent.com/dogcom-dotcom/sol-insider-data/main/assets/og-image.webp" />
+  <meta property="og:image" content="assets/hero.webp" />
   <link rel="icon" href="assets/logo.svg" />
-  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Наши стили с недостающими классами -->
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body class="bg-[#0a0c12] text-white antialiased">
   <a href="#opps" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-black/60 px-3 py-2 rounded">Skip to content</a>
 
-  <!-- NAVBAR -->
-  <header class="sticky top-0 z-40 bg-[#0a0c12]/75 backdrop-blur border-b border-white/10">
-    <div class="mx-auto max-w-7xl px-4 h-16 flex items-center justify-between">
-      <a href="./" class="flex items-center gap-3 group" aria-label="Go to homepage">
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40 bg-[#0a0c12]/70 backdrop-blur border-b border-white/10">
+    <div class="max-w-7xl mx-auto h-16 px-4 flex items-center justify-between">
+      <a href="./" class="flex items-center gap-3" aria-label="Go to homepage">
         <img src="assets/logo.svg" alt="Logo" class="w-8 h-8" />
         <span class="font-semibold tracking-wide">SOL Insider</span>
+        <span class="pill-live">LIVE</span>
       </a>
       <nav class="hidden md:flex items-center gap-6 text-sm" aria-label="Primary">
         <a href="#opps" class="link">Opportunities</a>
-        <a href="#updates" class="link">Ecosystem Updates</a>
+        <a href="#updates" class="link">Updates</a>
         <a href="#how" class="link">How it works</a>
         <a href="terms.html" class="link">Terms</a>
       </nav>
       <div class="flex items-center gap-3">
-        <!-- Сохраняю onclick для совместимости, функция определена в main.js -->
         <button onclick="openModal()" class="btn-primary">Join the Network</button>
         <button id="menuBtn" class="md:hidden p-2 rounded hover:bg-white/10" aria-label="Menu" aria-controls="mobileMenu" aria-expanded="false">
-          <svg width="24" height="24" fill="none" stroke="currentColor" role="img" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" /></svg>
+          <svg width="24" height="24" fill="none" stroke="currentColor" role="img" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
       </div>
     </div>
     <div id="mobileMenu" class="md:hidden hidden border-t border-white/10" role="navigation" aria-label="Mobile">
       <nav class="px-4 py-3 flex flex-col gap-3 text-sm">
         <a href="#opps" class="link">Opportunities</a>
-        <a href="#updates" class="link">Ecosystem Updates</a>
+        <a href="#updates" class="link">Updates</a>
         <a href="#how" class="link">How it works</a>
         <a href="terms.html" class="link">Terms</a>
       </nav>
@@ -51,54 +49,50 @@
   <!-- HERO -->
   <section class="relative overflow-hidden">
     <div class="absolute inset-0 -z-10 hero-gradient"></div>
-
-    <div class="hero-media mx-auto" aria-hidden="true">
-      <img src="https://raw.githubusercontent.com/dogcom-dotcom/sol-insider-data/main/assets/hero.webp" alt="SOL Insider" class="media-cover rounded-2xl shadow-xl" width="700" height="1000" loading="eager" fetchpriority="high">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-12 px-4 py-16 md:py-24">
+      <div data-reveal>
+        <div class="badge">For Solana holders</div>
+        <h1 class="mt-6 font-semibold leading-tight text-[clamp(34px,5.2vw,56px)] tracking-tight">
+          Early, vetted Solana opportunities for <span class="gradient-text">serious holders</span>
+        </h1>
+        <p class="mt-5 text-white/70 max-w-md">Curated staking, DePIN and governance plays with caps, terms and deadlines. Access by application.</p>
+        <div class="mt-8 flex items-center gap-3">
+          <button onclick="openModal()" class="btn-primary">Apply for access</button>
+          <a href="#opps" class="btn-ghost">View sample</a>
+        </div>
+      </div>
+      <div class="hero-media" aria-hidden="true" data-reveal>
+        <img src="assets/hero.webp" alt="SOL Insider" class="media-cover rounded-2xl" width="700" height="1000" loading="eager" fetchpriority="high" />
+      </div>
     </div>
-
-    <div class="relative mx-auto max-w-6xl px-4 py-16 md:py-24 text-center">
-      <div class="badge">For Solana holders</div>
-      <h1 class="mt-6 text-4xl md:text-6xl font-semibold leading-tight">
-        Private Network for <span class="gradient-text">Strategic SOL Growth</span>
-      </h1>
-      <p class="mt-5 text-white/70 max-w-2xl mx-auto">
-        Early access to high-conviction, ecosystem-vetted opportunities for Solana holders only.
-      </p>
-      <div class="mt-8 flex items-center justify-center gap-3">
-        <button onclick="openModal()" class="btn-primary">Join the Network</button>
-        <a href="#opps" class="btn-ghost">Explore Opportunities</a>
-      </div>
-
-      <!-- STATS -->
-      <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
-        <div class="stat" data-reveal><div id="stat-live" data-counter>0</div><span class="text-white/60 text-sm">Active opportunities</span></div>
-        <div class="stat" data-reveal><div id="stat-claim" data-counter>0</div><span class="text-white/60 text-sm">Member claims</span></div>
-        <div class="stat" data-reveal><div id="stat-upcoming" data-counter>0</div><span class="text-white/60 text-sm">Upcoming</span></div>
-        <div class="stat" data-reveal><div id="stat-users" data-counter>0</div><span class="text-white/60 text-sm">Online</span></div>
-      </div>
+    <div class="mt-12 px-4 max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4" id="stats" data-reveal>
+      <div class="stat"><div id="stat-live" data-counter>0</div><span class="text-white/60 text-sm">Active opportunities</span></div>
+      <div class="stat"><div id="stat-claim" data-counter>0</div><span class="text-white/60 text-sm">Member claims</span></div>
+      <div class="stat"><div id="stat-upcoming" data-counter>0</div><span class="text-white/60 text-sm">Upcoming</span></div>
+      <div class="stat"><div id="stat-users" data-counter>0</div><span class="text-white/60 text-sm">Online</span></div>
     </div>
   </section>
 
   <!-- VALUE PROPS -->
-  <section class="mx-auto max-w-6xl px-4 py-14">
+  <section class="max-w-6xl mx-auto px-4 py-14">
     <div class="grid md:grid-cols-3 gap-6">
       <div class="value glass" data-reveal>
-        <h3>Curated by Ecosystem Insiders</h3>
-        <p class="text-white/70">We cut the noise. Every opportunity is screened by those building the Solana future.</p>
+        <h3>Early, capped allocations</h3>
+        <p class="text-white/70">Priority entry to capped staking, DePIN routes and DAO votes.</p>
       </div>
       <div class="value glass" data-reveal>
-        <h3>Early Access, Measurable Yield</h3>
-        <p class="text-white/70">From validator partnerships to DePIN integrations — positioned before the crowd.</p>
+        <h3>Metric-driven, transparent screening</h3>
+        <p class="text-white/70">Every case scored for risk, liquidity, uptime and net yield.</p>
       </div>
       <div class="value glass" data-reveal>
-        <h3>Governance with Real Influence</h3>
-        <p class="text-white/70">Assets that not only grow, but shape the protocols they power.</p>
+        <h3>Clean, verified execution</h3>
+        <p class="text-white/70">Verified links, deadlines and steps — no paid listings.</p>
       </div>
     </div>
   </section>
 
   <!-- OPPORTUNITIES -->
-  <section id="opps" class="mx-auto max-w-7xl px-4 py-10">
+  <section id="opps" class="max-w-7xl mx-auto px-4 py-10">
     <div class="flex items-end justify-between mb-6">
       <h2 class="section-title">Featured Opportunities</h2>
       <div class="filters" role="tablist" aria-label="Opportunity filters">
@@ -109,7 +103,6 @@
       </div>
     </div>
     <div id="oppsGrid" class="cards" aria-live="polite">
-      <!-- skeletons на случай медленной загрузки -->
       <article class="card skeleton" style="height:280px"></article>
       <article class="card skeleton" style="height:280px"></article>
       <article class="card skeleton" style="height:280px"></article>
@@ -117,7 +110,7 @@
   </section>
 
   <!-- UPDATES -->
-  <section id="updates" class="mx-auto max-w-7xl px-4 py-10">
+  <section id="updates" class="max-w-7xl mx-auto px-4 py-10">
     <h2 class="section-title mb-6">Ecosystem Updates</h2>
     <div id="newsGrid" class="cards" aria-live="polite">
       <article class="card skeleton" style="height:220px"></article>
@@ -127,22 +120,23 @@
   </section>
 
   <!-- HOW -->
-  <section id="how" class="mx-auto max-w-6xl px-4 pb-20">
-    <div class="glass p-6 md:p-9 rounded-2xl" data-reveal>
-      <h3 class="sub-title">How it works</h3>
-      <ol class="mt-4 space-y-3 text-white/80 list-decimal list-inside">
-        <li>Connect your wallet — membership is verified on-chain.</li>
-        <li>Access curated deals — staking, DePIN, governance plays.</li>
-        <li>Track transparent outcomes — all on-chain, nothing hidden.</li>
-      </ol>
-      <p class="mt-4 text-sm text-white/60">All CTAs are wallet-gated via your integration.</p>
+  <section id="how" class="max-w-6xl mx-auto px-4 pb-20">
+    <h2 class="section-title mb-6">How it works</h2>
+    <div class="grid md:grid-cols-4 gap-6">
+      <div class="step-card glass" data-reveal><span class="step-badge">Step 1</span><p>Connect your wallet — membership is verified on-chain.</p></div>
+      <div class="step-card glass" data-reveal><span class="step-badge">Step 2</span><p>Access curated deals — staking, DePIN, governance plays.</p></div>
+      <div class="step-card glass" data-reveal><span class="step-badge">Step 3</span><p>Track transparent outcomes — all on-chain, nothing hidden.</p></div>
+      <div class="step-card glass" data-reveal><span class="step-badge">Step 4</span><p>Claim rewards or vote with confidence on protocol matters.</p></div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="border-t border-white/10 py-10 text-sm text-white/60">
-    <div class="mx-auto max-w-7xl px-4 flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
-      <div>© <span id="year"></span> SOL Insider</div>
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
+      <div class="flex items-center gap-2">
+        <span>© <span id="year"></span> SOL Insider</span>
+        <span class="pill-live">LIVE</span>
+      </div>
       <div class="flex gap-4">
         <a href="terms.html" class="hover:text-white">Terms</a>
         <a href="#" class="hover:text-white">Support</a>
@@ -150,7 +144,7 @@
     </div>
   </footer>
 
-  <!-- Modal -->
+  <!-- MODAL -->
   <div id="joinModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="join-title" aria-hidden="true">
     <div class="modal">
       <div class="flex items-start justify-between">
@@ -158,7 +152,6 @@
         <button id="modalClose" class="btn-ghost px-2 py-1" aria-label="Close dialog">✕</button>
       </div>
       <p class="text-white/70 mt-2">Verify membership by connecting your wallet or request an invite.</p>
-
       <div class="mt-4 space-y-3">
         <button class="btn-primary w-full" id="connectWalletBtn">Connect Wallet</button>
         <div class="flex items-center gap-2">
@@ -166,7 +159,7 @@
         </div>
         <form id="inviteForm" class="space-y-2" novalidate>
           <label class="sr-only" for="email">Email</label>
-          <input class="input" id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+          <input class="input" id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required/>
           <button class="btn-ghost w-full" type="submit">Request Invite</button>
           <p id="inviteNote" class="text-xs text-white/50"></p>
         </form>
@@ -174,19 +167,19 @@
     </div>
   </div>
 
-  <!-- App data (как у тебя) -->
+  <!-- CONFIG -->
   <script>
     window.SOL_DATA = {
-      STATS_URL: "https://raw.githubusercontent.com/dogcom-dotcom/sol-insider-data/main/data/stats.json",
-      NEWS_URL: "https://raw.githubusercontent.com/dogcom-dotcom/sol-insider-data/main/data/news.json",
+      STATS_URL: "data/stats.json",
+      NEWS_URL: "data/news.json",
       RAW_ASSETS: {
-        OP_01: "https://raw.githubusercontent.com/dogcom-dotcom/sol-insider-data/main/assets/op-01.webp",
-        OP_02: "https://raw.githubusercontent.com/dogcom-dotcom/sol-insider-data/main/assets/op-02.webp",
-        OP_03: "https://raw.githubusercontent.com/dogcom-dotcom/sol-insider-data/main/assets/op-03.webp",
+        OP_01: "assets/op-01.webp",
+        OP_02: "assets/op-02.webp",
+        OP_03: "assets/op-03.webp",
         NEWS_DEFAULTS: [
-          "https://raw.githubusercontent.com/dogcom-dotcom/sol-insider-data/main/assets/news-yield.webp",
-          "https://raw.githubusercontent.com/dogcom-dotcom/sol-insider-data/main/assets/news-depin.webp",
-          "https://raw.githubusercontent.com/dogcom-dotcom/sol-insider-data/main/assets/news-governance.webp"
+          "assets/news-yield.webp",
+          "assets/news-depin.webp",
+          "assets/news-governance.webp"
         ]
       }
     };
