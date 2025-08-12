@@ -1,15 +1,21 @@
 [
   {
-    "title": "Solana validators introduce prioritized fee sharing model",
-    "url": "https://example.com/post/fee-sharing",
-    "image": "https://cdn.example.com/img/news/fee-sharing.webp",
-    "source": "Example Blog",
+    "title": "Solana's Jito Proposes Routing 100% of Block Engine Fees to DAO Treasury",
+    "url": "https://www.coindesk.com/tech/2025/08/05/solana-s-jito-proposes-routing-100-of-block-engine-fees-to-dao-treasury",
+    "image": "assets/news-01.webp",
+    "source": "CoinDesk",
     "date": "2025-08-05"
   },
   {
-    "title": "DePIN coverage expands with new edge nodes",
-    "url": "https://example.com/post/depin-expansion",
-    "source": "Community",
-    "date": "2025-08-02"
+    "title": "Phantom Acquires Solsniper",
+    "url": "https://phantom.com/learn/blog/phantom-acquires-solsniper",
+    "source": "Phantom",
+    "date": "2025-08-04"
+  },
+  {
+    "title": "REX Osprey Solana ETF posts zero net flows across majority of August sessions",
+    "url": "https://cryptoslate.com/rex-osprey-solana-etf-posts-zero-net-flows-across-majority-of-august-sessions/",
+    "source": "CryptoSlate",
+    "date": "2025-08-11"
   }
 ]
