@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SOL Insider — Solana Holders’ Network</title>
+  <meta name="description" content="A private hub for SOL holders: curated opportunities, staking programs, DePIN integrations, and governance plays." />
+  <meta property="og:title" content="SOL Insider — Solana Holders’ Network" />
+  <meta property="og:description" content="Exclusive access for SOL holders to vetted, ecosystem-backed opportunities." />
+  <meta property="og:image" content="https://raw.githubusercontent.com/dogcom-dotcom/sol-insider-data/main/assets/og-image.webp" />
+  <link rel="icon" href="assets/logo.svg" />
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Наши стили с недостающими классами -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-[#0a0c12] text-white antialiased">
+  <a href="#opps" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-black/60 px-3 py-2 rounded">Skip to content</a>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-40 bg-[#0a0c12]/75 backdrop-blur border-b border-white/10">
+    <div class="mx-auto max-w-7xl px-4 h-16 flex items-center justify-between">
+      <a href="./" class="flex items-center gap-3 group" aria-label="Go to homepage">
+        <img src="assets/logo.svg" alt="Logo" class="w-8 h-8" />
+        <span class="font-semibold tracking-wide">SOL Insider</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm" aria-label="Primary">
+        <a href="#opps" class="link">Opportunities</a>
+        <a href="#updates" class="link">Ecosystem Updates</a>
+        <a href="#how" class="link">How it works</a>
+        <a href="terms.html" class="link">Terms</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <!-- Сохраняю onclick для совместимости, функция определена в main.js -->
+        <button onclick="openModal()" class="btn-primary">Join the Network</button>
+        <button id="menuBtn" class="md:hidden p-2 rounded hover:bg-white/10" aria-label="Menu" aria-controls="mobileMenu" aria-expanded="false">
+          <svg width="24" height="24" fill="none" stroke="currentColor" role="img" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" /></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-white/10" role="navigation" aria-label="Mobile">
+      <nav class="px-4 py-3 flex flex-col gap-3 text-sm">
+        <a href="#opps" class="link">Opportunities</a>
+        <a href="#updates" class="link">Ecosystem Updates</a>
+        <a href="#how" class="link">How it works</a>
+        <a href="terms.html" class="link">Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 hero-gradient"></div>
+
+    <div class="hero-media mx-auto" aria-hidden="true">
+      <img src="https://raw.githubusercontent.com/dogcom-dotcom/sol-insider-data/main/assets/hero.webp" alt="SOL Insider" class="media-cover rounded-2xl shadow-xl" width="700" height="1000" loading="eager" fetchpriority="high">
+    </div>
+
+    <div class="relative mx-auto max-w-6xl px-4 py-16 md:py-24 text-center">
+      <div class="badge">For Solana holders</div>
+      <h1 class="mt-6 text-4xl md:text-6xl font-semibold leading-tight">
+        Private Network for <span class="gradient-text">Strategic SOL Growth</span>
+      </h1>
+      <p class="mt-5 text-white/70 max-w-2xl mx-auto">
+        Early access to high-conviction, ecosystem-vetted opportunities for Solana holders only.
+      </p>
+      <div class="mt-8 flex items-center justify-center gap-3">
+        <button onclick="openModal()" class="btn-primary">Join the Network</button>
+        <a href="#opps" class="btn-ghost">Explore Opportunities</a>
+      </div>
+
+      <!-- STATS -->
+      <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+        <div class="stat" data-reveal><div id="stat-live" data-counter>0</div><span class="text-white/60 text-sm">Active opportunities</span></div>
+        <div class="stat" data-reveal><div id="stat-claim" data-counter>0</div><span class="text-white/60 text-sm">Member claims</span></div>
+        <div class="stat" data-reveal><div id="stat-upcoming" data-counter>0</div><span class="text-white/60 text-sm">Upcoming</span></div>
+        <div class="stat" data-reveal><div id="stat-users" data-counter>0</div><span class="text-white/60 text-sm">Online</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUE PROPS -->
+  <section class="mx-auto max-w-6xl px-4 py-14">
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="value glass" data-reveal>
+        <h3>Curated by Ecosystem Insiders</h3>
+        <p class="text-white/70">We cut the noise. Every opportunity is screened by those building the Solana future.</p>
+      </div>
+      <div class="value glass" data-reveal>
+        <h3>Early Access, Measurable Yield</h3>
+        <p class="text-white/70">From validator partnerships to DePIN integrations — positioned before the crowd.</p>
+      </div>
+      <div class="value glass" data-reveal>
+        <h3>Governance with Real Influence</h3>
+        <p class="text-white/70">Assets that not only grow, but shape the protocols they power.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPPORTUNITIES -->
+  <section id="opps" class="mx-auto max-w-7xl px-4 py-10">
+    <div class="flex items-end justify-between mb-6">
+      <h2 class="section-title">Featured Opportunities</h2>
+      <div class="filters" role="tablist" aria-label="Opportunity filters">
+        <button class="tab-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="tab-btn" data-filter="staking" role="tab" aria-selected="false">Staking</button>
+        <button class="tab-btn" data-filter="depin" role="tab" aria-selected="false">DePIN</button>
+        <button class="tab-btn" data-filter="governance" role="tab" aria-selected="false">Governance</button>
+      </div>
+    </div>
+    <div id="oppsGrid" class="cards" aria-live="polite">
+      <!-- skeletons на случай медленной загрузки -->
+      <article class="card skeleton" style="height:280px"></article>
+      <article class="card skeleton" style="height:280px"></article>
+      <article class="card skeleton" style="height:280px"></article>
+    </div>
+  </section>
+
+  <!-- UPDATES -->
+  <section id="updates" class="mx-auto max-w-7xl px-4 py-10">
+    <h2 class="section-title mb-6">Ecosystem Updates</h2>
+    <div id="newsGrid" class="cards" aria-live="polite">
+      <article class="card skeleton" style="height:220px"></article>
+      <article class="card skeleton" style="height:220px"></article>
+      <article class="card skeleton" style="height:220px"></article>
+    </div>
+  </section>
+
+  <!-- HOW -->
+  <section id="how" class="mx-auto max-w-6xl px-4 pb-20">
+    <div class="glass p-6 md:p-9 rounded-2xl" data-reveal>
+      <h3 class="sub-title">How it works</h3>
+      <ol class="mt-4 space-y-3 text-white/80 list-decimal list-inside">
+        <li>Connect your wallet — membership is verified on-chain.</li>
+        <li>Access curated deals — staking, DePIN, governance plays.</li>
+        <li>Track transparent outcomes — all on-chain, nothing hidden.</li>
+      </ol>
+      <p class="mt-4 text-sm text-white/60">All CTAs are wallet-gated via your integration.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 py-10 text-sm text-white/60">
+    <div class="mx-auto max-w-7xl px-4 flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
+      <div>© <span id="year"></span> SOL Insider</div>
+      <div class="flex gap-4">
+        <a href="terms.html" class="hover:text-white">Terms</a>
+        <a href="#" class="hover:text-white">Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div id="joinModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="join-title" aria-hidden="true">
+    <div class="modal">
+      <div class="flex items-start justify-between">
+        <h2 id="join-title" class="text-lg font-semibold">Join the SOL Insider Network</h2>
+        <button id="modalClose" class="btn-ghost px-2 py-1" aria-label="Close dialog">✕</button>
+      </div>
+      <p class="text-white/70 mt-2">Verify membership by connecting your wallet or request an invite.</p>
+
+      <div class="mt-4 space-y-3">
+        <button class="btn-primary w-full" id="connectWalletBtn">Connect Wallet</button>
+        <div class="flex items-center gap-2">
+          <div class="h-px bg-white/10 flex-1"></div><span class="text-white/40 text-xs">or</span><div class="h-px bg-white/10 flex-1"></div>
+        </div>
+        <form id="inviteForm" class="space-y-2" novalidate>
+          <label class="sr-only" for="email">Email</label>
+          <input class="input" id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+          <button class="btn-ghost w-full" type="submit">Request Invite</button>
+          <p id="inviteNote" class="text-xs text-white/50"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- App data (как у тебя) -->
+  <script>
+    window.SOL_DATA = {
+      STATS_URL: "https://raw.githubusercontent.com/dogcom-dotcom/sol-insider-data/main/data/stats.json",
+      NEWS_URL: "https://raw.githubusercontent.com/dogcom-dotcom/sol-insider-data/main/data/news.json",
+      RAW_ASSETS: {
+        OP_01: "https://raw.githubusercontent.com/dogcom-dotcom/sol-insider-data/main/assets/op-01.webp",
+        OP_02: "https://raw.githubusercontent.com/dogcom-dotcom/sol-insider-data/main/assets/op-02.webp",
+        OP_03: "https://raw.githubusercontent.com/dogcom-dotcom/sol-insider-data/main/assets/op-03.webp",
+        NEWS_DEFAULTS: [
+          "https://raw.githubusercontent.com/dogcom-dotcom/sol-insider-data/main/assets/news-yield.webp",
+          "https://raw.githubusercontent.com/dogcom-dotcom/sol-insider-data/main/assets/news-depin.webp",
+          "https://raw.githubusercontent.com/dogcom-dotcom/sol-insider-data/main/assets/news-governance.webp"
+        ]
+      }
+    };
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>
