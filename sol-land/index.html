@@ -35,121 +35,7 @@
         </button>
       </div>
     </div>
-    <div id="mobileMenu" class="md:hidden hidden border-t border-white/10" role="navigation" aria-label="Mobile">
-      <nav class="px-4 py-3 flex flex-col gap-3 text-sm">
-        <a href="#opps" class="link">Opportunities</a>
-        <a href="#updates" class="link">Updates</a>
-        <a href="#how" class="link">How it works</a>
-        <a href="terms.html" class="link">Terms</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- HERO -->
-  <section class="relative overflow-hidden">
-    <div class="absolute inset-0 -z-10 hero-gradient"></div>
-    <div class="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-12 px-4 py-16 md:py-24">
-      <div data-reveal>
-        <div class="badge">For Solana holders</div>
-        <h1 class="mt-6 font-semibold leading-tight text-[clamp(34px,5.2vw,56px)] tracking-tight">
-          Early, vetted Solana opportunities for <span class="gradient-text">serious holders</span>
-        </h1>
-        <p class="mt-5 text-white/70 max-w-md">Curated staking, DePIN and governance plays with caps, terms and deadlines. Access by application.</p>
-        <div class="mt-8 flex items-center gap-3">
-          <button onclick="openModal()" class="btn-primary">Apply for access</button>
-          <a href="#opps" class="btn-ghost">View sample</a>
-        </div>
-      </div>
-      <div class="hero-media" aria-hidden="true" data-reveal>
-        <img src="assets/hero.webp" alt="SOL Insider" class="media-cover rounded-2xl" width="700" height="1000" loading="eager" fetchpriority="high" />
-      </div>
-    </div>
-    <div class="mt-12 px-4 max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4" id="stats" data-reveal>
-      <div class="stat"><div id="stat-live" data-counter>0</div><span class="text-white/60 text-sm">Active opportunities</span></div>
-      <div class="stat"><div id="stat-claim" data-counter>0</div><span class="text-white/60 text-sm">Member claims</span></div>
-      <div class="stat"><div id="stat-upcoming" data-counter>0</div><span class="text-white/60 text-sm">Upcoming</span></div>
-      <div class="stat"><div id="stat-users" data-counter>0</div><span class="text-white/60 text-sm">Online</span></div>
-    </div>
-  </section>
-
-  <!-- VALUE PROPS -->
-  <section class="max-w-6xl mx-auto px-4 py-14">
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="value glass" data-reveal>
-        <h3>Early, capped allocations</h3>
-        <p class="text-white/70">Priority entry to capped staking, DePIN routes and DAO votes.</p>
-      </div>
-      <div class="value glass" data-reveal>
-        <h3>Metric-driven, transparent screening</h3>
-        <p class="text-white/70">Every case scored for risk, liquidity, uptime and net yield.</p>
-      </div>
-      <div class="value glass" data-reveal>
-        <h3>Clean, verified execution</h3>
-        <p class="text-white/70">Verified links, deadlines and steps — no paid listings.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- OPPORTUNITIES -->
-  <section id="opps" class="max-w-7xl mx-auto px-4 py-10">
-    <div class="flex items-end justify-between mb-6">
-      <h2 class="section-title">Featured Opportunities</h2>
-      <div class="filters" role="tablist" aria-label="Opportunity filters">
-        <button class="tab-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
-        <button class="tab-btn" data-filter="staking" role="tab" aria-selected="false">Staking</button>
-        <button class="tab-btn" data-filter="depin" role="tab" aria-selected="false">DePIN</button>
-        <button class="tab-btn" data-filter="governance" role="tab" aria-selected="false">Governance</button>
-      </div>
-    </div>
-    <div id="oppsGrid" class="cards" aria-live="polite">
-      <article class="card skeleton" style="height:280px"></article>
-      <article class="card skeleton" style="height:280px"></article>
-      <article class="card skeleton" style="height:280px"></article>
-    </div>
-  </section>
-
-  <!-- UPDATES -->
-  <section id="updates" class="max-w-7xl mx-auto px-4 py-10">
-    <h2 class="section-title mb-6">Ecosystem Updates</h2>
-    <div id="newsGrid" class="cards" aria-live="polite">
-      <article class="card skeleton" style="height:220px"></article>
-      <article class="card skeleton" style="height:220px"></article>
-      <article class="card skeleton" style="height:220px"></article>
-    </div>
-  </section>
-
-  <!-- HOW -->
-  <section id="how" class="max-w-6xl mx-auto px-4 pb-20">
-    <h2 class="section-title mb-6">How it works</h2>
-    <div class="grid md:grid-cols-4 gap-6">
-      <div class="step-card glass" data-reveal><span class="step-badge">Step 1</span><p>Connect your wallet — membership is verified on-chain.</p></div>
-      <div class="step-card glass" data-reveal><span class="step-badge">Step 2</span><p>Access curated deals — staking, DePIN, governance plays.</p></div>
-      <div class="step-card glass" data-reveal><span class="step-badge">Step 3</span><p>Track transparent outcomes — all on-chain, nothing hidden.</p></div>
-      <div class="step-card glass" data-reveal><span class="step-badge">Step 4</span><p>Claim rewards or vote with confidence on protocol matters.</p></div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="border-t border-white/10 py-10 text-sm text-white/60">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
-      <div class="flex items-center gap-2">
-        <span>© <span id="year"></span> SOL Insider</span>
-        <span class="pill-live">LIVE</span>
-      </div>
-      <div class="flex gap-4">
-        <a href="terms.html" class="hover:text-white">Terms</a>
-        <a href="#" class="hover:text-white">Support</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- MODAL -->
-  <div id="joinModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="join-title" aria-hidden="true">
-    <div class="modal">
-      <div class="flex items-start justify-between">
-        <h2 id="join-title" class="text-lg font-semibold">Join the SOL Insider Network</h2>
-        <button id="modalClose" class="btn-ghost px-2 py-1" aria-label="Close dialog">✕</button>
-      </div>
+@@ -154,36 +153,36 @@
       <p class="text-white/70 mt-2">Verify membership by connecting your wallet or request an invite.</p>
       <div class="mt-4 space-y-3">
         <button class="btn-primary w-full" id="connectWalletBtn">Connect Wallet</button>
@@ -175,14 +61,14 @@
         OP_01: "assets/op-01.webp",
         OP_02: "assets/op-02.webp",
         OP_03: "assets/op-03.webp",
-        NEWS_DEFAULTS: [
+        NEWS_DEFAULTS: [␊
           "assets/news-default-1.webp",
           "assets/news-default-2.webp",
           "assets/news-default-3.webp"
-        ]
-      }
-    };
-  </script>
+        ]␊
+      }␊
+    };␊
+  </script>␊
   <script src="js/main.js" defer></script>
-</body>
-</html>
+</body>␊
+</html>␊
