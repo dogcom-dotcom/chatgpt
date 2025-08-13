@@ -18,7 +18,6 @@ html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:
 .link{color:var(--muted);transition:color var(--transition);} .link:hover{color:#fff;}
 .badge,.pill-live{display:inline-block;padding:2px 8px;border-radius:9999px;border:1px solid var(--border);background:rgba(255,255,255,.06);font-size:.75rem;color:var(--muted);} .pill-live{color:#fff;background:linear-gradient(90deg,var(--grad-start),var(--grad-end));border:none;}
 .btn-primary,.btn-ghost{position:relative;display:inline-flex;align-items:center;justify-content:center;padding:.65rem 1.2rem;border-radius:9999px;font-weight:600;transition:background var(--transition),color var(--transition),transform var(--transition);}
-
 .btn-primary{background:linear-gradient(90deg,var(--grad-start),var(--grad-end));color:#fff;box-shadow:var(--shadow-sm);}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);}
 .btn-primary:active{transform:none;}
@@ -51,3 +50,32 @@ html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:
 .skeleton{position:relative;overflow:hidden;background:#0d1120;} .skeleton::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,#ffffff10 50%,transparent);animation:shimmer 1.2s infinite;} @keyframes shimmer{from{transform:translateX(-100%);}to{transform:translateX(100%);}}
 .hero-media{transition:transform .6s ease-out;}
 @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important;}}
+
+.flex{display:flex;}
+.hidden{display:none;}
+.items-center{align-items:center;}
+.justify-between{justify-content:space-between;}
+.gap-3{gap:.75rem;}
+.gap-6{gap:1.5rem;}
+.mx-auto{margin-left:auto;margin-right:auto;}
+.max-w-7xl{max-width:80rem;}
+.max-w-6xl{max-width:72rem;}
+.max-w-4xl{max-width:56rem;}
+.h-16{height:4rem;}
+.w-8{width:2rem;}
+.h-8{height:2rem;}
+.px-4{padding-left:1rem;padding-right:1rem;}
+.py-10{padding-top:2.5rem;padding-bottom:2.5rem;}
+.py-14{padding-top:3.5rem;padding-bottom:3.5rem;}
+.py-16{padding-top:4rem;padding-bottom:4rem;}
+.py-24{padding-top:6rem;padding-bottom:6rem;}
+.pb-20{padding-bottom:5rem;}
+.mt-6{margin-top:1.5rem;}
+.mt-5{margin-top:1.25rem;}
+.mt-8{margin-top:2rem;}
+.mt-3{margin-top:.75rem;}
+.mt-4{margin-top:1rem;}
+.mt-12{margin-top:3rem;}
+.mb-6{margin-bottom:1.5rem;}
+
+img{max-width:100%;height:auto;}
